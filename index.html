@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <!-- <script src="./assets/js/scroll.js"></script> -->
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Alliance Media</title>
+  </head>
+  <!-- <body onload="init()"> -->
+  <body>
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <!-- HEADER  -->
+
+    <header class="header">
+      <nav class="navbar container">
+        <a href="./index.html" class="navbar__logo">
+          <!-- <img
+            src="./assets/images//download.svg"
+            alt=""
+            class="navbar__logo-image"
+          /> -->
+          <h6 class="logo--text">Alliance Media</h6>
+        </a>
+        <!-- <div class="navbar__menu">
+          <ul class="navbar__list">
+            <li class="navbar__list-item">
+              <a href="#home" class="navbar__list-link">Home</a>
+            </li>
+            <li class="navbar__list-item">
+              <a href="#portfolio" class="navbar__list-link">Portfolio</a>
+            </li>
+            <li class="navbar__list-item">
+              <a href="#services" class="navbar__list-link">Oferta</a>
+            </li>
+            <li class="navbar__list-item">
+              <a href="#about" class="navbar__list-link">O nas</a>
+            </li>
+            <li class="navbar__list-item">
+              <a href="#blog" class="navbar__list-link">Blog</a>
+            </li>
+          </ul>
+        </div> -->
+        <div class="second-menu">
+          <!-- <header class="container">
+            <a href="./index.html" class="navbar__logo logo-nav">
+              <h6 class="logo--text">Alliance Media</h6>
+            </a>
+          </header> -->
+          <!-- <div class="container"> -->
+          <div class="menu-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <!-- <li><a href="#home" class="nav-link active-link">Home</a></li> -->
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#services" class="nav-link">Oferta</a></li>
+            <li><a href="#about" class="nav-link">O nas</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+          </ul>
+          <!-- </div> -->
+        </div>
+        <div class="navbar__btn-group">
+          <a
+            href="mailto:loremm@domain.com"
+            class="btn btn--text btn--transparent"
+            >Kontakt</a
+          >
+          <button class="btn place-items-center" id="theme-toggle-btn">
+            <i class="ri-sun-line sun-icon"></i>
+            <i class="ri-moon-line moon-icon"></i>
+          </button>
+          <!-- <button
+            class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+            id="menu-toggler"
+          >
+            <i class="ri-menu-3-line open-menu-icon"></i>
+            <i class="ri-close-line close-menu-icon"></i>
+          </button> -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="smooth-scroll-wrapper">
+      <div class="content">
+        <!-- main -->
+        <main>
+          <!-- showcase -->
+          <section class="showcase" id="home">
+            <div class="showcase__container container">
+              <h1 class="showcase__title title title--main">
+                Pomożemy Ci
+                <span data-value="zaistnieć." class="text-effect"
+                  >zaistnieć.</span
+                >
+              </h1>
+              <h1 class="showcase__title2">Zbudujemy Twoja markę.</h1>
+              <!-- <h1 class="showcase__title title title--main">
+            Hello, I'm Cris Paul, a professional photographer.
+          </h1> -->
+              <!-- <picture class="showcase__image">
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/showcase_image_lg.png"
+            />
+            <img src="./assets/images/showcase_image_sm.png" alt="" />
+          </picture> -->
+            </div>
+          </section>
+          <!-- portfolio -->
+          <section class="portfolio" id="portfolio">
+            <div class="portfolio__container container">
+              <div class="portfolio__metadata section-metadata">
+                <!-- <h2 class="title">Nasze realizacje</h2> -->
+              </div>
+              <div class="swiper myswiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./assets/images/img1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/images/img2.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/images/img3.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/images/img4.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/images/img5.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+          <!-- services -->
+          <section id="services" class="services">
+            <div class="services__container container">
+              <div class="services__metadata section-metadata">
+                <h2 class="title">Oferta</h2>
+                <p class="section-metadata__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  voluptate veniam quisquam dignissimos quae vel dolorem. Dicta
+                  quasi iure, qui eligendi, veritatis esse nam possimus officia
+                  at aperiam porro autem?
+                </p>
+              </div>
+              <div class="services__image-wrapper">
+                <img src="./assets/images/hero.jpg" alt="" />
+              </div>
+              <div class="services__list">
+                <div class="services__list-divider">
+                  <article class="services__list-item">
+                    <i class="ri-macbook-line services__list-icon"></i>
+                    <h3 class="services__list-title title">
+                      Strony internetowe
+                    </h3>
+                    <p class="services__list-description">
+                      Projektowanie graficzne i implementacja responsywnych
+                      stron www i aplikacji mobilnych
+                    </p>
+                  </article>
+                  <article class="services__list-item">
+                    <i class="ri-palette-line services__list-icon"></i>
+                    <h3 class="services__list-title title">
+                      Identyfikacja wizualna
+                    </h3>
+                    <p class="services__list-description">
+                      Projektowanie graficzne logo, wizytówek, papieru
+                      firmowego, materiałów promocyjnych, reklam, ulotek,
+                      plakatów, folderów, prezentacji multimedialnych etc.
+                    </p>
+                  </article>
+                </div>
+                <article class="services__list-item">
+                  <i class="ri-draft-line services__list-icon"></i>
+                  <h3 class="services__list-title title">Copywriting</h3>
+                  <p class="services__list-description">
+                    Tworzenie treści reklamowych, sloganów, scenariuszy reklam,
+                    artykułów tematycznych, contentu na strony internetowe, do
+                    broszur reklamowych, etc.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- about -->
+          <section class="about" id="about">
+            <div class="about__container container">
+              <div class="about__information">
+                <h2 class="about__information-title title">Poznajmy się!</h2>
+                <p class="about__information-description">
+                  Alliance Media Polska S.A. to poznańska agencja interaktywna.
+                </p>
+                <p class="about__information-description">
+                  Oferujemy szereg usług związanych z reklamą oraz identyfikacją
+                  wizualną Twojej firmy od stworzenia profesjonalnej strony
+                  internetowej, prezentacji multimedialnych, layoutów reklam,
+                  projektów wizytówek czy papieru firmowego, po działania z
+                  zakresu ATL i BTL oraz zaplanowanie i przeprowadzenie kampanii
+                  promocyjnej w wybranych przez Klienta mediach.
+                </p>
+                <a href="#" class="btn btn--text btn-green"
+                  >Dowiedz się więcej</a
+                >
+              </div>
+              <div class="about__images">
+                <img
+                  src="./assets/images/about_top.jpg"
+                  alt=""
+                  class="about__images-image about__images-image--top"
+                />
+                <img
+                  src="./assets/images/about_bottom.jpg"
+                  alt=""
+                  class="about__images-image about__images-image--bottom"
+                />
+              </div>
+            </div>
+          </section>
+          <!-- latest projects -->
+          <section class="projects" id="projects">
+            <div class="projects__container container">
+              <div class="blog__metadata section-metadata">
+                <h2 class="title">Ostatnie realizacje</h2>
+                <p
+                  class="blog__metadata-description section-metadata__description"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  voluptate veniam quisquam dignissimos quae vel dolorem.
+                </p>
+                <div class="projects__btn-group">
+                  <button
+                    type="button"
+                    class="btn btn--text btn--project active"
+                  >
+                    Wszystkie
+                  </button>
+                  <button class="btn btn--text btn--project" data-btn="1">
+                    Layouty
+                  </button>
+                  <button class="btn btn--text btn--project" data-btn="2">
+                    Logotypy
+                  </button>
+                  <button class="btn btn--text btn--project" data-btn="3">
+                    Wizytówki
+                  </button>
+                </div>
+              </div>
+              <div class="projects-wrapper">
+                <img src="./assets/images/img3.jpg" alt="" data-img="2" />
+
+                <img src="./assets/images/img2.jpg" alt="" data-img="2" />
+
+                <img src="./assets/images/img4.jpg" alt="" data-img="1" />
+
+                <img src="./assets/images/img5.jpg" alt="" data-img="3" />
+                <img src="./assets/images/img1.jpg" alt="" data-img="1" />
+                <img src="./assets/images/img3.jpg" alt="" data-img="3" />
+              </div>
+            </div>
+          </section>
+          <!-- blog -->
+          <section class="blog" id="blog">
+            <div class="blog__container container">
+              <div class="blog__metadata section-metadata">
+                <h2 class="title">Najnowsze wpisy</h2>
+                <p
+                  class="blog__metadata-description section-metadata__description"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  voluptate veniam quisquam dignissimos quae vel dolorem. Dicta
+                  quasi iure, qui eligendi, veritatis esse nam possimus officia
+                  at aperiam porro autem?
+                </p>
+                <a href="#" class="btn btn--text btn--transparent"
+                  >Zobacz wszystkie</a
+                >
+              </div>
+              <article class="blog__post post--left">
+                <picture class="blog__post-image">
+                  <source
+                    media="(min-width:450px)"
+                    srcset="./assets/images/blog_post_1.jpg"
+                  />
+                  <img src="./assets/images/blog_post_1.jpg" alt="" />
+                </picture>
+                <h3 class="blog__post-title title">
+                  Sześć zasad projektowania stron
+                </h3>
+                <a href="#" class="btn btn--text btn--transparent">Czytaj</a>
+              </article>
+              <article class="blog__post post--right">
+                <picture class="blog__post-image">
+                  <source
+                    media="(min-width:450px)"
+                    srcset="./assets/images/seo2.jpg"
+                  />
+                  <img src="./assets/images/seo2.jpg" alt="" />
+                </picture>
+                <h3 class="blog__post-title title">SEO w Wordpress</h3>
+                <a href="#" class="btn btn--text btn--transparent">Czytaj</a>
+              </article>
+            </div>
+          </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__container container">
+            <div class="footer__group">
+              <h2 class="footer__title title title--main">
+                Szukasz profesjonalnej agencji
+                <span data-value="interaktywnej?" class="text-effect2"
+                  >interaktywnej?</span
+                >
+                <!-- <span data-value="zaistnieć." class="text-effect"
+                  >zaistnieć.</span
+                > -->
+              </h2>
+              <a href="#" class="btn btn--text btn--transparent"
+                >Skontaktuj się z nami</a
+              >
+            </div>
+            <span class="footer__separator"></span>
+            <div class="footer__group">
+              <a href="./index.html" class="footer__logo">
+                <!-- <img
+                  src="./assets/images//download.svg"
+                  alt=""
+                  class="navbar__logo-image"
+                /> -->
+                <h6 class="logo--text">Alliance Media</h6>
+              </a>
+              <p class="footer__description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reprehenderit sequi inventore eos soluta corporis libero
+                distinctio
+              </p>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"
+                    ><i class="ri-facebook-line"></i
+                  ></a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"
+                    ><i class="ri-instagram-line"></i
+                  ></a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"
+                    ><i class="ri-twitter-line"></i
+                  ></a>
+                </li>
+              </ul>
+              <span class="footer__copyright"
+                >&copy; Alliance Media 2023. Wszystkie prawa zastrzeżone.</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

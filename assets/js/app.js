@@ -90,6 +90,10 @@ const swiper = new Swiper(".myswiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 50,

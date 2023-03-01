@@ -37,20 +37,12 @@ function smoothScroll() {
   requestAnimationFrame(smoothScroll);
 }
 
-if (window.matchMedia("(min-width: 1024px)").matches) {
-  scrollWrapper.classList.add("active");
-  window.addEventListener(
-    "load",
-    function () {
-      setTimeout(() => {
-        setupAnimation();
-      });
-    },
-    50
-  );
-} else {
-  scrollWrapper.classList.remove("active");
-}
+// if (window.matchMedia("(min-width: 1024px)").matches) {
+// scrollWrapper.classList.add("active");
+
+// } else {
+//   scrollWrapper.classList.remove("active");
+// }
 
 // const scroll = new LocomotiveScroll({
 //   el: document.querySelector("[data-scroll-container]"),
@@ -214,7 +206,7 @@ document.body.onpointermove = (event) => {
 // scroll reveal
 
 const sr = ScrollReveal({
-  distance: "50px",
+  distance: "100px",
   duration: 1500,
   easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
 });
@@ -229,18 +221,20 @@ sr.reveal(
 
 sr.reveal(".services__image-wrapper,.about__information, .post--left", {
   origin: "left",
-  interval: 150,
 });
 
-sr.reveal(".services__list,.about__images, .post--left, .post--right", {
-  origin: "right",
-});
+sr.reveal(
+  ".services__list,.about__images, .post--left, .post--right, .projects-wrapper",
+  {
+    origin: "right",
+  }
+);
 
-sr.reveal("", {
+sr.reveal(".projects__container", {
   origin: "top",
 });
 
-var scroll = new SmoothScroll('a[href*="#"]');
+// var scroll = new SmoothScroll('a[href*="#"]');
 
 // second menu
 
@@ -291,7 +285,6 @@ function closeMenu() {
 const btns = document.querySelectorAll(".btn--project");
 const imgs = [...document.querySelectorAll(".projects-wrapper img")];
 const imgWrapper = document.querySelector(".projects-wrapper");
-// const delay = 100;
 
 let imgsCopy = [...imgs];
 
@@ -363,3 +356,13 @@ btns[0].addEventListener("click", async (e) => {
     }, idx * 100);
   });
 });
+
+// window.addEventListener(
+//   "load",
+//   function () {
+//     setTimeout(() => {
+//       setupAnimation();
+//     });
+//   },
+//   50
+// );

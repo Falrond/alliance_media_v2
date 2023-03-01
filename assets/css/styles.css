@@ -41,9 +41,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 
-  scrollbar-color: rebeccapurple green;
-  scrollbar-width: thin;
-
   /* overflow-x: hidden; */
   /* height: 300vh; */
 }
@@ -369,7 +366,7 @@ button {
 .projects__btn-group {
   display: flex;
   align-items: center;
-  column-gap: 4rem;
+  column-gap: 2rem;
   justify-content: center;
 }
 /* second nav */
@@ -643,14 +640,9 @@ main {
 .projects-wrapper {
   display: grid;
   transition: 0.4s all;
-  /* max-width: 1360px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2em; */
+  gap: 1rem;
 }
 .projects-wrapper img {
   width: 22em;
@@ -682,7 +674,7 @@ main {
 /*! === BLOG === */
 
 .blog {
-  padding-top: 4rem;
+  padding-top: 8rem;
   padding-bottom: 12rem;
 }
 
@@ -855,10 +847,14 @@ main {
     align-items: center;
     gap: 2.5rem;
   }
+
   .projects-wrapper {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+  }
+  .projects__btn-group {
+    column-gap: 4rem;
   }
 
   .footer__description {

@@ -206,7 +206,7 @@ document.body.onpointermove = (event) => {
 // scroll reveal
 
 const sr = ScrollReveal({
-  distance: "100px",
+  distance: "60px",
   duration: 1500,
   easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
 });

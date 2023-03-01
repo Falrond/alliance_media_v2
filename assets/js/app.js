@@ -4,6 +4,7 @@ let ease = 0.1;
 
 let windowWidth, containerHeight, imageHeight, skewDiff;
 let container = document.querySelector(".content");
+const scrollWrapper = document.querySelector(".smooth-scroll-wrapper");
 
 function lerp(start, end, t) {
   return start * (1 - t) + end * t;
@@ -36,15 +37,20 @@ function smoothScroll() {
   requestAnimationFrame(smoothScroll);
 }
 
-window.addEventListener(
-  "load",
-  function () {
-    setTimeout(() => {
-      setupAnimation();
-    });
-  },
-  50
-);
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  scrollWrapper.classList.add("active");
+  window.addEventListener(
+    "load",
+    function () {
+      setTimeout(() => {
+        setupAnimation();
+      });
+    },
+    50
+  );
+} else {
+  scrollWrapper.classList.remove("active");
+}
 
 // const scroll = new LocomotiveScroll({
 //   el: document.querySelector("[data-scroll-container]"),

@@ -7,10 +7,14 @@
   --light-clr-2: #bed2c9;
   --light-clr-3: #e1e7dd;
   --dark-clr: #2e2e2e;
+  --bg-transparent: rgba(46, 46, 46, 0.8);
   --body-font-clr: #bdbdbd;
   --body-bg-clr: #222222;
   --title-font: "Bebas Neue", cursive;
   --body-font: "Poppins", sans-serif;
+  --box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  --blob-gradient-1: rgba(127, 255, 212, 0.466);
+  --blob-gradient-2: rgba(147, 112, 216, 0.4);
 }
 
 /*! === BASE === */
@@ -36,6 +40,9 @@ body {
   /* overflow: hidden; */
   width: 100%;
   overflow-x: hidden;
+
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 
   /* overflow-x: hidden; */
   /* height: 300vh; */
@@ -99,6 +106,8 @@ body.light-theme {
   --body-bg-clr: #fff;
   --dark-clr: #f6f6f6;
   --body-font-clr: rgba(0, 0, 0, 0.6);
+  --bg-transparent: rgba(250, 250, 250, 0.8);
+  --box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   /* --secondary-background-color: #f1f1f1; */
   --secondary-background-color: #f2e0d5;
   --hover-light-color: #fff;
@@ -106,6 +115,8 @@ body.light-theme {
   --hover-dark-color: var(--primary-background-color);
   --transparent-light-color: rgba(0, 0, 0, 0.1);
   --transparent-dark-color: rgba(242, 224, 213, 0.85);
+  --blob-gradient-1: rgba(127, 255, 212);
+  --blob-gradient-2: rgba(147, 112, 216);
 }
 
 a {
@@ -131,19 +142,27 @@ button {
 
 /*! === SCROLLBAR === */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--light-clr-2);
+  background: var(--dark-clr);
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@supports (scrollbar-color: #888 var(--dark-clr)) {
+  * {
+    scrollbar-color: #888 var(--dark-clr);
+    scrollbar-width: thin;
+  }
 }
 
 /*! === COMPONENTS === */
@@ -281,9 +300,9 @@ button {
 
 .header.active {
   padding-top: 1rem;
-  background-color: rgba(46, 46, 46, 0.8);
+  background-color: var(--bg-transparent);
   backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .navbar {
@@ -395,7 +414,7 @@ button {
 
 .nav-link {
   position: relative;
-  color: #cbcfd3;
+  color: var(--light-clr);
   left: 0;
   text-decoration: none;
   font-size: 3.5rem;
@@ -409,13 +428,13 @@ button {
 }
 
 .nav-link.active:hover {
-  color: white;
+  color: var(--hover-dark-color);
   left: 10%;
   transition: 0.5s;
 }
 
 .active-link {
-  color: white;
+  color: var(--light-clr);
 }
 
 .menu-close {
@@ -441,7 +460,7 @@ button {
   transform: translate(-50%, -50%);
   width: 70%;
   height: 2px;
-  background-color: white;
+  background-color: var(--light-clr);
 }
 
 .menu-close span:nth-child(1) {
@@ -884,8 +903,8 @@ main {
   border-radius: 50%;
   background: linear-gradient(
     to right,
-    rgba(127, 255, 212, 0.466),
-    rgba(147, 112, 216, 0.4)
+    var(--blob-gradient-1),
+    var(--blob-gradient-2)
   );
   animation: rotate 30s infinite;
   z-index: -999;
@@ -898,7 +917,7 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-  backdrop-filter: blur(12vmax);
+  backdrop-filter: blur(8vmax);
   z-index: -998;
 }
 

@@ -193,19 +193,19 @@ document.querySelector(".text-effect").onmouseover = (event) => {
   // }, 22);
 };
 
-const blob = document.getElementById("blob");
+// const blob = document.getElementById("blob");
 
-document.body.onpointermove = (event) => {
-  const { clientX, clientY } = event;
+// document.body.onpointermove = (event) => {
+//   const { clientX, clientY } = event;
 
-  blob.animate(
-    {
-      left: `${clientX}px`,
-      top: `${clientY}px`,
-    },
-    { duration: 6000, fill: "forwards" }
-  );
-};
+//   blob.animate(
+//     {
+//       left: `${clientX}px`,
+//       top: `${clientY}px`,
+//     },
+//     { duration: 6000, fill: "forwards" }
+//   );
+// };
 
 // scroll reveal
 

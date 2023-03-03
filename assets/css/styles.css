@@ -613,7 +613,7 @@ main {
 }
 .prices__list-item {
   position: relative;
-  padding: 2rem;
+  padding: 1.2rem;
 }
 .prices__list-item::before {
   content: "";

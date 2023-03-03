@@ -86,26 +86,26 @@ const selectElement = (selector) => {
 };
 
 // swiper
-// const swiper = new Swiper(".myswiper", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2000,
-//     disableOnInteraction: false,
-//   },
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
+const swiper = new Swiper(".myswiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 
 // Switch theme/add to local storage
 
@@ -193,19 +193,19 @@ document.querySelector(".text-effect").onmouseover = (event) => {
   // }, 22);
 };
 
-// const blob = document.getElementById("blob");
+const blob = document.getElementById("blob");
 
-// document.body.onpointermove = (event) => {
-//   const { clientX, clientY } = event;
+document.body.onpointermove = (event) => {
+  const { clientX, clientY } = event;
 
-//   blob.animate(
-//     {
-//       left: `${clientX}px`,
-//       top: `${clientY}px`,
-//     },
-//     { duration: 6000, fill: "forwards" }
-//   );
-// };
+  blob.animate(
+    {
+      left: `${clientX}px`,
+      top: `${clientY}px`,
+    },
+    { duration: 6000, fill: "forwards" }
+  );
+};
 
 // scroll reveal
 

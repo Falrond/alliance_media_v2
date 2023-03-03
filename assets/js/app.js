@@ -86,26 +86,26 @@ const selectElement = (selector) => {
 };
 
 // swiper
-const swiper = new Swiper(".myswiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
+// const swiper = new Swiper(".myswiper", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 2000,
+//     disableOnInteraction: false,
+//   },
+//   slidesPerView: "auto",
+//   coverflowEffect: {
+//     rotate: 50,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
 
 // Switch theme/add to local storage
 

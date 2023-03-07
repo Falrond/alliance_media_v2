@@ -13,8 +13,8 @@
   --title-font: "Bebas Neue", cursive;
   --body-font: "Poppins", sans-serif;
   --box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-  --blob-gradient-1: rgba(243, 146, 0, 0.466);
-  --blob-gradient-2: rgba(0, 159, 227, 0.4);
+  --blob-gradient-1: rgba(243, 146, 0, 0.666);
+  --blob-gradient-2: rgba(0, 159, 227, 0.6);
   --viewport-height: 100%;
 }
 

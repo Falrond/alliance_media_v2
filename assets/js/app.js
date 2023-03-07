@@ -1,41 +1,39 @@
-let current = 0;
-let target = 0;
-let ease = 0.1;
+// let current = 0;
+// let target = 0;
+// let ease = 0.1;
 
-let windowWidth, containerHeight, imageHeight, skewDiff;
-let container = document.querySelector(".content");
-const scrollWrapper = document.querySelector(".smooth-scroll-wrapper");
+// let windowWidth, containerHeight, imageHeight, skewDiff;
+// let container = document.querySelector(".content");
+// const scrollWrapper = document.querySelector(".smooth-scroll-wrapper");
 
-function lerp(start, end, t) {
-  return start * (1 - t) + end * t;
-}
+// function lerp(start, end, t) {
+//   return start * (1 - t) + end * t;
+// }
 
-console.log(lerp(5, 10, 0.5));
+// function setTransform(el, transform) {
+//   el.style.transform = transform;
+// }
 
-function setTransform(el, transform) {
-  el.style.transform = transform;
-}
+// function setupAnimation() {
+//   windowWidth = window.innerWidth;
+//   console.log(windowWidth);
+//   containerHeight = container.getBoundingClientRect().height;
+//   console.log(containerHeight);
+//   imageHeight =
+//     containerHeight / (windowWidth > 760 ? images.length / 2 : images.length);
 
-function setupAnimation() {
-  windowWidth = window.innerWidth;
-  console.log(windowWidth);
-  containerHeight = container.getBoundingClientRect().height;
-  console.log(containerHeight);
-  // imageHeight =
-  //   containerHeight / (windowWidth > 760 ? images.length / 2 : images.length);
+//   document.body.style.height = `${containerHeight}px`;
 
-  document.body.style.height = `${containerHeight}px`;
+//   smoothScroll();
+// }
 
-  smoothScroll();
-}
-
-function smoothScroll() {
-  current = lerp(current, target, ease);
-  current = parseFloat(current.toFixed(2));
-  target = window.scrollY;
-  setTransform(container, `translateY(${-current}px)`);
-  requestAnimationFrame(smoothScroll);
-}
+// function smoothScroll() {
+//   current = lerp(current, target, ease);
+//   current = parseFloat(current.toFixed(2));
+//   target = window.scrollY;
+//   setTransform(container, `translateY(${-current}px)`);
+//   requestAnimationFrame(smoothScroll);
+// }
 
 // if (window.matchMedia("(min-width: 1024px)").matches) {
 // scrollWrapper.classList.add("active");

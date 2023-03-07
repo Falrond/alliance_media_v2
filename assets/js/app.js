@@ -327,7 +327,7 @@ async function filterImg(e) {
   console.log(reverseArray);
   for (let img of reverseArray) {
     await removingImage(img);
-    await delay(100);
+    await delay(50);
   }
 
   imgWrapper.innerHTML = "";
@@ -337,9 +337,9 @@ async function filterImg(e) {
   imgWrapper.append(...imgsCopy);
 
   for (let img of imgsCopy) {
-    await delay(100);
+    await delay(50);
     await addingImage(img);
-    await delay(100);
+    await delay(50);
   }
 }
 

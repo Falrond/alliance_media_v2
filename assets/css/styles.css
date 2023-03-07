@@ -301,9 +301,9 @@ button {
 }
 
 .navbar__logo-image {
-  /* min-width: 7.2rem; */
+  min-width: 7.2rem;
   height: 3.5rem;
-  max-width: 20rem;
+  /* max-width: 18rem; */
 }
 
 .navbar__menu {

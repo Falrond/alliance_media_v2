@@ -285,14 +285,30 @@ function closeMenu() {
 // filtering posts animation
 
 const btns = document.querySelectorAll(".btn--project");
+const activeBtn = document.querySelector(".btn--project.active");
 const imgs = [...document.querySelectorAll(".projects-wrapper img")];
 const imgWrapper = document.querySelector(".projects-wrapper");
 
 let imgsCopy = [...imgs];
-
 function delay(t) {
   return new Promise((resolve) => setTimeout(resolve, t));
 }
+
+function adjustActives() {
+  console.log(imgsCopy);
+  for (let img of imgs) {
+    removingImage(img);
+  }
+  imgWrapper.innerHTML = "";
+  imgsCopy = imgs.filter((img) => +img.dataset.img === +activeBtn.dataset.btn);
+
+  imgWrapper.append(...imgsCopy);
+  for (let img of imgsCopy) {
+    addingImage(img);
+  }
+}
+
+adjustActives();
 
 function removingImage(img) {
   img.classList.remove("img-expand");
@@ -308,14 +324,14 @@ async function filterImg(e) {
   setActiveBtns(e);
   const btnType = parseInt(e.target.dataset.btn);
   const reverseArray = imgsCopy.slice().reverse();
-
+  console.log(reverseArray);
   for (let img of reverseArray) {
     await removingImage(img);
     await delay(100);
   }
 
   imgWrapper.innerHTML = "";
-
+  console.log(imgsCopy);
   imgsCopy = imgs.filter((img) => +img.dataset.img === btnType);
 
   imgWrapper.append(...imgsCopy);
@@ -327,7 +343,7 @@ async function filterImg(e) {
   }
 }
 
-for (let i = 1; i < btns.length; i++) {
+for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", filterImg);
 }
 
@@ -339,25 +355,55 @@ function setActiveBtns(e) {
   e.target.classList.add("active");
 }
 
-btns[0].addEventListener("click", async (e) => {
-  setActiveBtns(e);
-  const reverseArray = imgsCopy.slice().reverse();
+// add zoom and zoom out pictures
 
-  for (let img of reverseArray) {
-    await removingImage(img);
-    await delay(100);
-  }
-  imgsCopy = [...imgs];
-  imgWrapper.innerHTML = "";
-  imgWrapper.append(...imgsCopy);
-  await delay(100);
-  imgs.forEach((img, idx) => {
-    setTimeout(() => {
-      img.classList.remove("img-shrink");
-      img.classList.add("img-expand");
-    }, idx * 100);
-  });
+// Get the modal
+const modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+imgs.forEach((img) => {
+  img.addEventListener("click", zoomImg);
 });
+
+function zoomImg() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  modalImg.alt = this.alt;
+  captionText.innerHTML = this.alt;
+}
+
+// When the user clicks on <span> (x), close the modal
+modal.onclick = function () {
+  img01.className += " out";
+  setTimeout(function () {
+    modal.style.display = "none";
+    img01.className = "modal-content";
+  }, 400);
+};
+
+// btns[0].addEventListener("click", async (e) => {
+//   setActiveBtns(e);
+//   const reverseArray = imgsCopy.slice().reverse();
+
+//   for (let img of reverseArray) {
+//     await removingImage(img);
+//     await delay(100);
+//   }
+//   imgsCopy = [...imgs];
+//   imgWrapper.innerHTML = "";
+//   imgWrapper.append(...imgsCopy);
+//   await delay(100);
+//   imgs.forEach((img, idx) => {
+//     setTimeout(() => {
+//       img.classList.remove("img-shrink");
+//       img.classList.add("img-expand");
+//     }, idx * 100);
+//   });
+// });
 
 // window.addEventListener(
 //   "load",

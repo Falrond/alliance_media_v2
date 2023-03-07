@@ -13,8 +13,8 @@
   --title-font: "Bebas Neue", cursive;
   --body-font: "Poppins", sans-serif;
   --box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-  --blob-gradient-1: rgba(127, 255, 212, 0.466);
-  --blob-gradient-2: rgba(147, 112, 216, 0.4);
+  --blob-gradient-1: rgba(243, 146, 0, 0.466);
+  --blob-gradient-2: rgba(0, 159, 227, 0.4);
   --viewport-height: 100%;
 }
 
@@ -88,8 +88,8 @@ body.light-theme {
   --hover-dark-color: var(--primary-background-color);
   --transparent-light-color: rgba(0, 0, 0, 0.1);
   --transparent-dark-color: rgba(242, 224, 213, 0.85);
-  --blob-gradient-1: rgba(127, 255, 212);
-  --blob-gradient-2: rgba(147, 112, 216);
+  --blob-gradient-1: rgba(243, 146, 0, 0.8);
+  --blob-gradient-2: rgba(0, 159, 227, 0.8);
 }
 
 a {
@@ -248,7 +248,7 @@ button {
 .title--main {
   font-size: clamp(4.2rem, 8vw, 10rem);
   line-height: 1.2;
-  background: url(../images/hero6.jpg) center 37% no-repeat;
+  background: url(../images/hero.svg) center 37% no-repeat;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
@@ -303,7 +303,7 @@ button {
 .navbar__logo-image {
   min-width: 7.2rem;
   height: 3.5rem;
-  /* max-width: 18rem; */
+  max-width: 20rem;
 }
 
 .navbar__menu {
@@ -640,7 +640,7 @@ main {
 .prices__list-price span {
   color: var(--light-clr-2);
   font-size: 3.6rem;
-  background: url(../images/hero6.jpg) center 37% no-repeat;
+  background: url(../images/hero.svg) center 37% no-repeat;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;

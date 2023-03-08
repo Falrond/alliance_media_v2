@@ -1,5 +1,6 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+const body = document.querySelector("body");
 let particles = [];
 let randomMaxSpeed = 0.8;
 console.log(canvas.width);
@@ -43,7 +44,13 @@ class Particle {
         Math.abs(x - particles[i].coordinates.x) <= 200 &&
         Math.abs(y - particles[i].coordinates.y) <= 200
       ) {
+        // if (body.classList.contains("light-theme")) {
+        //   ctx.strokeStyle = `#03c0ff25`;
+        // } else {
+        //   ctx.strokeStyle = `#0666F34`;
+        // }
         ctx.strokeStyle = `#03c0ff25`;
+        // ctx.strokeStyle = `#F3920025`;
         ctx.beginPath();
         ctx.moveTo(x, y);
         ctx.lineTo(particles[i].coordinates.x, particles[i].coordinates.y);

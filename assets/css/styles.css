@@ -572,6 +572,21 @@ main {
 .services__list-title {
   margin-bottom: 1rem;
 }
+.services__carousel {
+  margin-top: 2rem;
+}
+
+.myswiper2 {
+  /* width: 50%; */
+}
+
+.services__carousel-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 /*! === PRICES === */
 
@@ -1006,6 +1021,14 @@ main {
   .second-menu ul {
     left: 12%;
   }
+
+  .services__carousel {
+    margin-top: 5rem;
+  }
+
+  .myswiper2 {
+    width: 50%;
+  }
 }
 
 #blob {
@@ -1023,6 +1046,7 @@ main {
   );
   animation: rotate 30s infinite;
   z-index: -999;
+  filter: blur(50px);
 }
 
 #blur {
@@ -1033,6 +1057,15 @@ main {
   left: 0;
   backdrop-filter: blur(8vmax);
   z-index: -998;
+}
+
+.hero__canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -997;
 }
 
 /* The Modal (background) */

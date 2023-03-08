@@ -84,25 +84,41 @@ const selectElement = (selector) => {
 };
 
 // swiper
-const swiper = new Swiper(".myswiper", {
-  effect: "coverflow",
-  grabCursor: true,
+// const swiper = new Swiper(".myswiper", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 2000,
+//     disableOnInteraction: false,
+//   },
+//   slidesPerView: "auto",
+//   coverflowEffect: {
+//     rotate: 50,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+// swiper
+const swiper2 = new Swiper(".myswiper2", {
+  speed: 800,
+  effect: "fade",
   centeredSlides: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  fadeEffect: { crossFade: true },
 });
 
 // Switch theme/add to local storage

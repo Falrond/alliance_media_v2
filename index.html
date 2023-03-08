@@ -24,7 +24,7 @@
     <!-- Blob -->
     <div id="blob"></div>
     <div id="blur"></div>
-
+    <canvas class="hero__canvas"></canvas>
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <img class="modal-content" id="img01" />
@@ -137,10 +137,46 @@
         </div>
       </section>
       <!-- portfolio -->
-      <section class="portfolio" id="portfolio">
+      <section>
+        <div class="services__carousel container">
+          <div class="swiper myswiper2 load-hidden">
+            <div class="swiper-wrapper">
+              <div class="services__carousel-list-item swiper-slide">
+                <!-- <i class="ri-macbook-line services__list-icon"></i> -->
+                <h3 class="services__list-title title">Strony internetowe</h3>
+                <p class="services__list-description">
+                  Projektowanie graficzne i implementacja responsywnych stron
+                  www i aplikacji mobilnych
+                </p>
+              </div>
+              <div class="services__carousel-list-item swiper-slide">
+                <!-- <i class="ri-palette-line services__list-icon"></i> -->
+                <h3 class="services__list-title title">
+                  Identyfikacja wizualna
+                </h3>
+                <p class="services__list-description">
+                  Projektowanie graficzne logo, wizytówek, papieru firmowego,
+                  materiałów promocyjnych, reklam, ulotek, plakatów, folderów,
+                  prezentacji multimedialnych etc.
+                </p>
+              </div>
+              <div class="services__carousel-list-item swiper-slide">
+                <!-- <i class="ri-draft-line services__list-icon"></i> -->
+                <h3 class="services__list-title title">Copywriting</h3>
+                <p class="services__list-description">
+                  Tworzenie treści reklamowych, sloganów, scenariuszy reklam,
+                  artykułów tematycznych, contentu na strony internetowe, do
+                  broszur reklamowych, etc.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="portfolio" id="portfolio">
         <div class="portfolio__container container">
           <div class="portfolio__metadata section-metadata">
-            <!-- <h2 class="title">Nasze realizacje</h2> -->
           </div>
           <div class="swiper myswiper load-hidden">
             <div class="swiper-wrapper">
@@ -163,20 +199,20 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- services -->
       <section id="services" class="services">
         <div class="services__container container">
           <div class="services__metadata section-metadata">
             <h2 class="title">Oferta</h2>
             <p class="section-metadata__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              voluptate veniam quisquam dignissimos quae vel dolorem. Dicta
-              quasi iure, qui eligendi, veritatis esse nam possimus officia at
-              aperiam porro autem?
+              Oferujemy szereg usług związanych z reklamą oraz identyfikacją
+              wizualną Twojej firmy od stworzenia profesjonalnej strony
+              internetowej, prezentacji multimedialnych, layoutów reklam,
+              projektów wizytówek czy papieru firmowego.
             </p>
           </div>
-          <div class="services__image-wrapper">
+          <!-- <div class="services__image-wrapper">
             <img src="./assets/images/hero.jpg" alt="" />
           </div>
           <div class="services__list">
@@ -210,7 +246,7 @@
                 broszur reklamowych, etc.
               </p>
             </article>
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- prices -->
@@ -508,5 +544,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script> -->
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/particles.js"></script>
   </body>
 </html>

@@ -64,7 +64,7 @@ function setDimentions() {
   //   canvas.style.height = "100";
 
   let w = window.innerWidth;
-  let particleTotal = w > 1000 ? 75 : 32;
+  let particleTotal = w > 1000 ? 100 : 65;
   for (let i = 0; i < particleTotal; i++) {
     let particle = new Particle();
     particles.push(particle);
